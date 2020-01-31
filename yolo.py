@@ -12,7 +12,7 @@ weightsPath='/home/colour-detection/maduchandana/yolo-coco/yolov3.weights'
 configPath = '/home/colour-detection/maduchandana/yolo-coco/yolov3.cfg'
 print("[INFO] loading YOLO from disk...")
 net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
-image = cv2.imread('/home/colour-detection/maduchandana/human.jpg')	#load image#
+image = cv2.imread('/home/colour-detection/maduchandana/baggage_claim.jpg')	#load image#
 (H, W) = image.shape[:2]
 ln = net.getLayerNames()	#get output layers#
 ln = [ln[i[0] - 1] for i in net.getUnconnectedOutLayers()]
